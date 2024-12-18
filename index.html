@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prenotazioni PWA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Prenota per Giocare!</h1>
+    <img src="assets/icon.png" alt="Il mio logo" style="max-width: 200px; margin-bottom: 20px;">
+    
+    <div id="pubblico">
+      <h2>Numero di persone in coda: <span id="conta-coda">0</span></h2>
+      <form id="prenotazione-form">
+        <input type="text" id="tiktok-id" placeholder="ID di TikTok" required>
+        <input type="text" id="gioco-id" placeholder="ID del Gioco" required>
+        <select id="modalita">
+          <option value="solo">Gioca da Solo</option>
+          <option value="con-qualcuno">Gioca con Qualcuno</option>
+        </select>
+        <div id="gioca-con-container" style="display: none;">
+          <input type="text" id="gioca-con" placeholder="Con chi vuoi giocare?">
+        </div>
+        <button type="submit">Prenota</button>
+      </form>
+    </div>
+
+    <h2>Accesso Completo</h2> <!-- Modificato -->
+    <form id="accesso-form">
+      <input type="password" id="password" placeholder="Inserisci la password" required>
+      <button type="submit">Accedi</button>
+    </form>
+    
+    <div id="prenotazioni-container" style="display: none;">
+      <h2>Prenotazioni in Corso</h2> <!-- Modificato -->
+      <ul id="coda-list">
+        <!-- Le prenotazioni appariranno qui -->
+      </ul>
+      <h2>Prenotazioni Completate</h2> <!-- Modificato -->
+      <ul id="giocate-list">
+        <!-- Le prenotazioni giocate appariranno qui -->
+      </ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
+
